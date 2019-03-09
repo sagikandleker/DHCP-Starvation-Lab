@@ -40,7 +40,7 @@ In this lab we will use [Docker](https://www.docker.com/get-started) & [Scapy](h
 ### Stop containers
 
 ## Submission
-You need to submit a detailed lab report, with screenshots, to describe what you have done and what you
-have observed. You also need to provide explanation to the observations that are interesting or surprising.
-Please also list the important code snippets followed by explanation. Simply attaching code without any
-explanation will not receive credits.
+You need to submit a detailed lab report, with screenshots, to describe what you have done and what you have observed.<br>
+You also need to provide explanation to the observations that are interesting or surprising.<br>
+Please also list the important code snippets followed by explanation.<br>
+Simply attaching code without any explanation will not receive credits.
