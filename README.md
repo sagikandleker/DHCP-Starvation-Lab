@@ -1,9 +1,9 @@
 # DHCP Spoofing and Starvation Lab
 ![](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg)
-![](https://img.shields.io/badge/requirements-Docker-red.svg)  
+![](https://img.shields.io/badge/requirements-VM-red.svg)  
 
 
-In this lab we will use [Docker](https://www.docker.com/get-started) & [Scapy](https://scapy.net/).  
+In this lab we will use [Kali Linux](https://images.offensive-security.com/virtual-images/kali-linux-2019.1-vbox-amd64.ova.torrent), [SEEDUbuntu16.04](https://drive.google.com/uc?authuser=0&id=1HxdUhq-J_-_QKyjngpH9m6Kmuvy0_68a&export=download) & [Scapy](https://scapy.net/). 
 
 ## Lab Overview
 
