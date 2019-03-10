@@ -1,4 +1,4 @@
-# DHCP Spoofing and Starvation Lab
+# DHCP Spoofing Lab
 ![](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg)
 
 In this lab we will use [Kali](https://www.kali.org), [Ubuntu](https://www.ubuntu.com) & [Scapy](https://scapy.net/). 
