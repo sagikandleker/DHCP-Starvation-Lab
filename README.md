@@ -22,12 +22,12 @@ If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, i
 
 Path: `cd "C:\Program Files\Oracle\VirtualBox\"`<br>
 
-- Target VM:<br>
+- Victim VM:<br>
   `VBoxManage startvm "Ubuntu"`<br>
-- Attack VM:<br>
+- Attacker VM:<br>
   `VBoxManage startvm "Kali"`<br>
 
-![](path)
+![](Images/dhcp_spoofing.jpg)
 
 ## Lab Tasks
 ### Task 1: DHCP Spoofing
