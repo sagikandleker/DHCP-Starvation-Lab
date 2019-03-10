@@ -18,8 +18,14 @@ DHCP spoofing is a method of attack of a computer on a local network on another 
 - In fact, the attacker scams the computer and causes it to think that it is the DHCP server on the local network, hence the name of the attack.
 
 ## Lab Environment
+If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, install it now.<br>
 
-` `
+Path: `cd "C:\Program Files\Oracle\VirtualBox\"`<br>
+
+- Target VM:<br>
+  `VBoxManage startvm "Ubuntu"`<br>
+- Attack VM:<br>
+  `VBoxManage startvm "Kali"`<br>
 
 ![](path)
 
@@ -31,14 +37,6 @@ DHCP spoofing is a method of attack of a computer on a local network on another 
 **Describe what do you see on Sniff's screen?**
 
 #### Task 2.2: Improve `spoofing_script`.
-
-### Task 3: DHCP Starvation
-
-### Task 4: 
-#### Task 4.1: Run `starvation_script`.
-**Describe what do you see on Sniff's screen?**
-#### Task 4.2: Improve `starvation_script`.
-#### Task 4.3: Launch the Attack
 
 
 ## Finish up
