@@ -1,21 +1,14 @@
-# DHCP Spoofing Lab
+# DHCP Starvation Lab
 ![](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg)
 
 In this lab we will use [Kali](https://www.kali.org), [Ubuntu](https://www.ubuntu.com) & [Scapy](https://scapy.net/). 
 
 ## Lab Overview
 The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
-DHCP spoofing is a method of attack of a computer on a local network on another computer on the same network that aims to control the network settings of the computer being attacked by phishing to a DHCP server running on the same network.
 
-- On a network where an active DHCP server is installed, workstations can mount without network settings and send a DHCP message in Broadcast.
+When a client system without an IP address enters a network it will request an IP address from the resident DHCP server. The DHCP server will reserve an IP address (so anyone else asking for one is not granted this one) and it will send that IP address to the device along with a lease identifying how long the address will be valid. Normally, from this point, the device will respond by confirming the IP address with the DHCP server and the DHCP server finally responds with an acknowledgement.
 
-- The DHCP server identifies the redirect and answers the requesting computer in a message containing the desired network settings, which usually contain the IP address assigned to the computer, the default gateway address, and the DNS server address.
-
-- In a DHCP attack spoofing the computer the attacker listens to the network and waits for DHCP messages sent on the Broadcast so that it can receive them as well.
-
-- Once a message is identified, it sends a counterfeit response message that competes with the server's response and if the affected computer receives its first message, it will adopt the network settings set in it.
-
-- In fact, the attacker scams the computer and causes it to think that it is the DHCP server on the local network, hence the name of the attack.
+In a DHCP starvation attack, once the adversary receives the IP address and the lease period from the DHCP server, the adversary does not respond with the confirmation. Instead, the adversary floods the DHCP server with IP address requests until all addresses within the server’s address space have been reserved (exhausted). At this point, any hosts wishing to join the network will be denied access, resulting in a denial of service.
 
 ## Lab Environment
 If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, install it now.<br>
