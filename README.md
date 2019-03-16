@@ -115,7 +115,18 @@ $ sudo systemctl restart networking
 ```sh
 $ git clone https://github.com/sagikandleker/DHCP-Starvation-Lab
 ```
-### Task 1: Run `run_script`.
+### Task 1: Configure the `run_script`.
+```py
+ip_address_subnet = "The IP you want to request from 10.0.0.100-10.0.0.200", For example - "10.0.0.150"
+subnet_mask = "Your subnet mask", For example - "255.255.255.0"
+dhcp_ip_address = "IP of DHCP Server", For example - "10.0.0.50"
+```
+Save the file and exit.
+
+### Task 2: Run `run_script`.
+```sh
+$ chmod 755 run_script.py
+```
 ```sh
 $ python run_script.py
 ```
@@ -139,7 +150,9 @@ if __name__=="__main__":
     main()
 ```
 
-### Task 2: Improve `run_script`.
+**NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
+
+### Task 3: Improve `run_script`.
 
 
 ## Submission
