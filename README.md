@@ -13,16 +13,20 @@ When a client system without an IP address enters a network it will request an I
 ## Lab Environment
 If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, install it now.<br>
 
-Path: `cd "C:\Program Files\Oracle\VirtualBox\"`<br>
+- DHCP Server (Ubuntu):<br>
+  ```
+  VBoxManage startvm "Ubuntu"
+  ```
+- Client (Ubuntu 16.04 VM):<br>
+  ```
+  VBoxManage startvm "Ubuntu-16-04"
+  ```
+- Attacker (Kali 64bit VM):<br>
+  ```
+  VBoxManage startvm "Kali-64bit"
+  ```
 
-- DHCP VM:<br>
-  `VBoxManage startvm "Ubuntu"`<br>
-- Victim VM:<br>
-  `VBoxManage startvm "Ubuntu"`<br>
-- Attacker VM:<br>
-  `VBoxManage startvm "Kali"`<br>
-
-![](Images/dhcp_spoofing.jpg)
+![](Images/dhcp_spoofing.jpgggggg)
 
 ## Configure the DHCP Server
 For the DHCP server, we need to run a DHCP server program.<br>
