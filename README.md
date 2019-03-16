@@ -91,6 +91,10 @@ $ sudo systemctl start isc-dhcp-server.service
 ```sh
 $ sudo systemctl enable isc-dhcp-server.service
 ```
+To check if server is running:
+```sh
+$ sudo systemctl status isc-dhcp-server.service
+```
 
 ### 4. Configuring DHCP Client Machines (Ubuntu and Kali)
 At this point, you can configure your clients computers on the network to automatically receive IP addresses from the DHCP server.
@@ -104,18 +108,27 @@ And define the options below:<br>
 auto eth0
 iface eth0 inet dhcp
 ```
+Save the file and exit.<br>
 
-Save the file and exit. And restart network services like so (or reboot the system):<br>
+**NOTE**: Do it for Client (Ubuntu 16.04 VM) and Attacker (Kali 64bit VM)
+
+And restart network services like so (or reboot the system):<br>
 ```sh
 $ sudo systemctl restart networking
 ```
-**NOTE**: Do it for Client (Ubuntu) and Attacker (Kali)
+
+**NOTE**: Only for Attacker (Kali 64bit VM)
 
 ## Lab Tasks
+
+### Task 1: Configure the `run_script` (Attacker).
+
+Download the git repository to the Attacker VM:
 ```sh
 $ git clone https://github.com/sagikandleker/DHCP-Starvation-Lab
 ```
-### Task 1: Configure the `run_script`.
+
+Use parameters that apply to your scenario:
 ```py
 ip_address_subnet = "The IP you want to request from 10.0.0.100-10.0.0.200", For example - "10.0.0.150"
 subnet_mask = "Your subnet mask", For example - "255.255.255.0"
@@ -124,6 +137,10 @@ dhcp_ip_address = "IP of DHCP Server", For example - "10.0.0.50"
 Save the file and exit.
 
 ### Task 2: Run `run_script`.
+In this task, the attacker sends a DHCP query request to the victim DHCP server.
+
+**NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
+
 ```sh
 $ chmod 755 run_script.py
 ```
@@ -149,11 +166,19 @@ def main():
 if __name__=="__main__":
     main()
 ```
-
-**NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
+### Task 2.1: Run `dhcp-lease-list` on DHCP server.
+Describe what do you see?
 
 ### Task 3: Improve `run_script`.
-
+Now that we understand how to spoof our own DHCP packet, lets improve our code!
+### Task 3.1: Loop it!
+Modify our run_script to send spoofed DHCP requests in a loop!
+**NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
+### Task 4: Did it work?
+In this task, we will use the Client (Ubuntu 16.04 VM) to see if the attack was successful.
+```sh
+$ sudo systemctl restart networking
+```
 
 ## Submission
 You need to submit a detailed lab report, with screenshots, to describe what you have done and what you have observed.<br>
