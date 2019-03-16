@@ -1,5 +1,5 @@
 # DHCP Starvation Lab
-![](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg)
+![](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg) ![](https://img.shields.io/badge/requirements-Scapy-red.svg)
 
 In this lab we will use [Kali](https://www.kali.org), [Ubuntu](https://www.ubuntu.com) & [Scapy](https://scapy.net/). 
 
