@@ -51,8 +51,8 @@ INTERFACES="eth0"
 The main DHCP configuration file is `/etc/dhcp/dhcpd.conf`, you must add all your network information to be sent to clients here.
 And, there are two types of statements defined in the DHCP configuration file, these are:
 
-parameters – specify how to perform a task, whether to carry out a task, or what network configuration options to send to the DHCP client.
-declarations – define the network topology, state the clients, offer addresses for the clients, or apply a group of parameters to a group of declarations.
+- parameters – specify how to perform a task, whether to carry out a task, or what network configuration options to send to the DHCP client.<br>
+- declarations – define the network topology, state the clients, offer addresses for the clients, or apply a group of parameters to a group of declarations.
 
 Now, open and modify the main configuration file, define your DHCP server options:<br>
 ```sh
@@ -81,7 +81,7 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 Next, start the DHCP service for the time being, and enable it to start automatically from the next system boot, like so:<br>
 ```sh
 $ sudo systemctl start isc-dhcp-server.service
-$ sudo sudo systemctl enable isc-dhcp-server.service
+$ sudo systemctl enable isc-dhcp-server.service
 ```
 
 ### Configuring DHCP Client Machines
