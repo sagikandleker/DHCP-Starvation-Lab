@@ -86,14 +86,14 @@ subnet 10.0.0.0 netmask 255.255.255.0 {
 
 Next, start the DHCP service for the time being, and enable it to start automatically from the next system boot, like so:<br>
 ```sh
-$ sudo systemctl start isc-dhcp-server.service
+$ sudo systemctl start isc-dhcp-server
 ```
 ```sh
-$ sudo systemctl enable isc-dhcp-server.service
+$ sudo systemctl enable isc-dhcp-server
 ```
 To check if server is running:
 ```sh
-$ sudo systemctl status isc-dhcp-server.service
+$ sudo systemctl status isc-dhcp-server
 ```
 
 ### 4. Configuring DHCP Client Machines (Ubuntu and Kali)
@@ -172,13 +172,16 @@ Describe what do you see?
 ### Task 3: Improve `run_script`.
 Now that we understand how to spoof our own DHCP packet, lets improve our code!
 ### Task 3.1: Loop it!
-Modify our run_script to send spoofed DHCP requests in a loop!
+Modify our run_script to send spoofed DHCP requests in a loop!<br>
 **NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
 ### Task 4: Did it work?
 In this task, we will use the Client (Ubuntu 16.04 VM) to see if the attack was successful.
 ```sh
 $ sudo systemctl restart networking
 ```
+If the Client fails to receive IP from the DHCP server our attack was successful.<br>
+### Task 4.1: Think outside the box.
+Think of another way to check whether the attack was successful.<br>
 
 ## Submission
 You need to submit a detailed lab report, with screenshots, to describe what you have done and what you have observed.<br>
