@@ -32,14 +32,14 @@ If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, i
 For the DHCP server, we need to run a DHCP server program.<br>
 The most widely used DHCP server software is called isc-dhcp-server.
 
-### Updating package tree in Ubuntu\Kali
+### Updating package tree in Ubuntu
 In order to install an isc-dhcp-server in Kali Linux.<br>
 First, we need to make sure the package tree is up –to-date with the latest software versions by issuing the below command.<br>
 ```sh
 $ sudo apt-get update
 ```
 
-### Installing DHCP Server in Ubuntu\Kali
+### Installing DHCP Server in Ubuntu
 Run the command below to install the DCHP server package, which was formerly known as dhcp3-server.<br>
 ```sh
 $ sudo apt install isc-dhcp-server
@@ -51,7 +51,7 @@ For example, if you want the DHCPD daemon to listen on eth0, set it:<br>
 INTERFACES="eth0"
 ```
 
-### Configuring DHCP Server in Ubuntu\Kali
+### Configuring DHCP Server in Ubuntu
 The main DHCP configuration file is `/etc/dhcp/dhcpd.conf`, you must add all your network information to be sent to clients here.
 And, there are two types of statements defined in the DHCP configuration file, these are:
 
