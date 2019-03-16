@@ -3,7 +3,7 @@
 
 In this lab we will use [Kali](https://www.kali.org), [Ubuntu](https://www.ubuntu.com) & [Scapy](https://scapy.net/). 
 
-## Lab Overview
+## 1. Lab Overview
 ### The Dynamic Host Configuration Protocol (DHCP)
 DHCP is a network management protocol used on UDP/IP networks whereby a DHCP server dynamically assigns an IP address and other network configuration parameters to each device on a network so they can communicate with other IP networks.
 
@@ -12,7 +12,7 @@ When a client system without an IP address enters a network it will request an I
 ### The DHCP Starvation
 Once the adversary receives the IP address and the lease period from the DHCP server, the adversary does not respond with the confirmation. Instead, the adversary floods the DHCP server with IP address requests until all addresses within the server’s address space have been reserved (exhausted). At this point, any hosts wishing to join the network will be denied access, resulting in a denial of service.
 
-## Lab Environment
+## 2. Lab Environment
 If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, install it now.<br>
 
 - DHCP Server (Ubuntu 18.04 VM):<br>
@@ -30,7 +30,7 @@ If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, i
 
 ![](Images/dhcp_spoofing.jpgggggg)
 
-## Configure the DHCP Server
+## 3. Configure the DHCP Server
 For the DHCP server, we need to run a DHCP server program.<br>
 The most widely used DHCP server software is called isc-dhcp-server.
 
@@ -96,7 +96,7 @@ To check if server is running:
 $ sudo systemctl status isc-dhcp-server
 ```
 
-## Configuring DHCP Client Machines (Ubuntu and Kali)
+## 4. Configuring DHCP Client Machines (Ubuntu and Kali)
 ### 1. Configuring network interfaces in Ubuntu (16.04) and Kali (64bit)
 At this point, you can configure your clients computers on the network to automatically receive IP addresses from the DHCP server.
 Login to the client computers and edit the Ethernet interface configuration file as follows (take note of the interface name/number):<br>
@@ -121,7 +121,7 @@ $ sudo systemctl restart networking
 
 **NOTE**: Only for Attacker (Kali 64bit VM)
 
-## Lab Tasks
+## 5. Lab Tasks
 
 ### Task 1: Configure the `run_script` (Attacker).
 
@@ -189,7 +189,7 @@ If the Client fails to receive IP from the DHCP server our attack was successful
 ### Task 4.1: Think outside the box.
 Think of another way to check whether the attack was successful.<br>
 
-## Submission
+## 6. Submission
 You need to submit a detailed lab report, with screenshots, to describe what you have done and what you have observed.<br>
 You also need to provide explanation to the observations that are interesting or surprising.<br>
 Please also list the important code snippets followed by explanation.<br>
