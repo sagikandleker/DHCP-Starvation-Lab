@@ -178,6 +178,7 @@ Describe what do you see?
 Now that we understand how to spoof our own DHCP packet, lets improve our code!
 ### Task 3.1: Loop it!
 Modify our run_script to send spoofed DHCP requests in a loop!<br>
+
 **NOTE**: Run [Wireshark](https://www.wireshark.org/download.html) in parallel to watch the traffic.
 ### Task 4: Did it work?
 In this task, we will use the Client (Ubuntu 16.04 VM) to see if the attack was successful.
