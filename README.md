@@ -17,7 +17,7 @@ If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, i
 
 - DHCP Server (Ubuntu 18.04 VM):<br>
   ```
-  VBoxManage startvm "Ubuntu"
+  VBoxManage startvm "Ubuntu-18-04"
   ```
 - Client (Ubuntu 16.04 VM):<br>
   ```
