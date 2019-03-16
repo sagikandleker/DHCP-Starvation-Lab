@@ -169,6 +169,9 @@ if __name__=="__main__":
     main()
 ```
 ### Task 2.1: Run `dhcp-lease-list` on DHCP server.
+```sh
+$ dhcp-lease-list
+```
 Describe what do you see?
 
 ### Task 3: Improve `run_script`.
