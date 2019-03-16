@@ -92,7 +92,7 @@ $ sudo systemctl start isc-dhcp-server.service
 $ sudo systemctl enable isc-dhcp-server.service
 ```
 
-### 4. Configuring DHCP Client Machines
+### 4. Configuring DHCP Client Machines (Ubuntu and Kali)
 At this point, you can configure your clients computers on the network to automatically receive IP addresses from the DHCP server.
 Login to the client computers and edit the Ethernet interface configuration file as follows (take note of the interface name/number):<br>
 ```sh
