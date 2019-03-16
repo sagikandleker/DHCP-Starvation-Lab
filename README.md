@@ -117,7 +117,7 @@ $ git clone https://github.com/sagikandleker/DHCP-Starvation-Lab
 ```
 ### Task 1: Run `run_script`.
 ```sh
-$ python /DHCP-Starvation-Lab/run_script.py
+$ python run_script.py
 ```
 ```py
 from scapy.all import *
