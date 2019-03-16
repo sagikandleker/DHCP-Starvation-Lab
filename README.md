@@ -15,7 +15,7 @@ Once the adversary receives the IP address and the lease period from the DHCP se
 ## Lab Environment
 If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, install it now.<br>
 
-- DHCP Server (Ubuntu):<br>
+- DHCP Server (Ubuntu 18.04 VM):<br>
   ```
   VBoxManage startvm "Ubuntu"
   ```
@@ -34,14 +34,14 @@ If [VirtualBox](https://www.virtualbox.org) is not installed on your computer, i
 For the DHCP server, we need to run a DHCP server program.<br>
 The most widely used DHCP server software is called isc-dhcp-server.
 
-### 1. Updating package tree in Ubuntu
+### 1. Updating package tree in Ubuntu (18.04)
 In order to install an isc-dhcp-server in Kali Linux.<br>
 First, we need to make sure the package tree is up –to-date with the latest software versions by issuing the below command.<br>
 ```sh
 $ sudo apt-get update
 ```
 
-### 2. Installing DHCP Server in Ubuntu
+### 2. Installing DHCP Server in Ubuntu (18.04)
 Run the command below to install the DCHP server package, which was formerly known as dhcp3-server.<br>
 ```sh
 $ sudo apt install isc-dhcp-server
@@ -53,7 +53,7 @@ For example, if you want the DHCPD daemon to listen on eth0, set it:<br>
 INTERFACES="eth0"
 ```
 
-### 3. Configuring DHCP Server in Ubuntu
+### 3. Configuring DHCP Server in Ubuntu (18.04)
 The main DHCP configuration file is `/etc/dhcp/dhcpd.conf`, you must add all your network information to be sent to clients here.
 And, there are two types of statements defined in the DHCP configuration file, these are:
 
