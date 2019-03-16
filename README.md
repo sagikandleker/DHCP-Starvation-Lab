@@ -97,6 +97,7 @@ $ sudo systemctl status isc-dhcp-server
 ```
 
 ## Configuring DHCP Client Machines (Ubuntu and Kali)
+### 1. Configuring network interfaces in Ubuntu (16.04) and Kali (64bit)
 At this point, you can configure your clients computers on the network to automatically receive IP addresses from the DHCP server.
 Login to the client computers and edit the Ethernet interface configuration file as follows (take note of the interface name/number):<br>
 ```sh
@@ -112,7 +113,8 @@ Save the file and exit.<br>
 
 **NOTE**: Do it for Client (Ubuntu 16.04 VM) and Attacker (Kali 64bit VM)
 
-And restart network services like so (or reboot the system):<br>
+### 2. Updating the network services
+Restart network services like so (or reboot the system):<br>
 ```sh
 $ sudo systemctl restart networking
 ```
