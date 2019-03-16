@@ -7,7 +7,6 @@ def main():
 	subnet_mask = "255.255.255.0"
 	dhcp_ip_address = "10.0.0.50"
 
-
 	bogus_mac_address = RandMAC()
 	dhcp_request = Ether(src=bogus_mac_address, dst=broadcast)/IP(src="0.0.0.0", dst=subnet_mask)/UDP(sport=68, dport=67)/BOOTP(chaddr=bogus_mac_address)/DHCP(options=[("message-type","request"),("server_id",dhcp_ip_address),("requested_addr", ip_address_subnet),"end"])
 
